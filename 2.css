@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Abril Fatface";
+}
+
+#main {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 20px;
+  max-width: 100px;
+}
+
+/* navbar */
+
+.heading {
+  font-size: 3rem;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.navbarList li a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #a9a9a9;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 20px;
+  margin-left: 20px;
+}
+
+.navbarList a:hover {
+  text-decoration: line-through;
+  text-decoration-color: #ff3131;
+}
+
+/* button */
+button {
+  background-color: #ff3131;
+  border: 5px solid #ff3131;
+  color: white;
+  font-size: 20px;
+  margin: 40px;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 40px;
+  width: 10rem;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  background-color: #bbff00;
+  border: 5px solid #bbff00;
+  color: black;
+}
+
+/* text */
+
+.content {
+  position: relative;
+}
+
+.main-text {
+  margin: 20px;
+  padding: 50px;
+  font-size: 60px;
+  font-weight: bolder;
+  width: 40rem;
+  position: absolute;
+}
+
+.sub-text {
+  color: grey;
+  margin-top: 6rem;
+  margin-left: 2.5rem;
+  grid-column: 2/3.5;
+  border-bottom: 1px solid #aa2626;
+  border-bottom-style: underline;
+  text-align: left;
+  line-height: 25px;
+  font-size: 15px;
+  width: 25rem;
+  position: absolute;
+  right: 40px;
+}
+
+/* container */
+.container {
+  padding: 10px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  bottom: 70px;
+  right: 50px;
+}
+
+.container .box p,
+.container .box a {
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container .box {
+  cursor: pointer;
+  box-shadow: 8px 8px 8px #a9a9a9;
+  border-radius: 10px;
+}
+
+.container .box img {
+  height: 130px;
+  width: 125px;
+  margin: 40px;
+  border-radius: 190px;
+}
+
+.openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+    max-width: 968px;
+  }
+
+  .navbarList,
+  button,
+  .br,
+  .sub-text,
+  .hidden {
+    display: none;
+  }
+
+  .heading {
+    text-align: center;
+    padding: 20px 50px;
+    margin: 30px 50px;
+    font-size: 30px;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 50px;
+    left: -35rem;
+    font-size: 25px;
+  }
+
+  .container {
+    padding: 18px 20px;
+    margin: 18px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    position: relative;
+    top: 25px;
+    right: 20px;
+  }
+
+  .closeMenu {
+    color: #ff3131;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  icons i {
+    display: inline-block;
+    padding: 18px;
+  }
+}
